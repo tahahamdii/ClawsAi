@@ -7,13 +7,15 @@ const chatContainer = document.querySelector('#chat_container')
 let loadInterval
 
 function loader(element) {
-    element.textContent = 'lahdha sadi9i'
+    element.textContent = 'wait for me pls'
 
     loadInterval = setInterval(() => {
+        // Update the text content of the loading indicator
         element.textContent += '.';
 
-        if (element.textContent === 'lahdha sadi9i...') {
-            element.textContent = 'lahdha sadi9i';
+        // If the loading indicator has reached three dots, reset it
+        if (element.textContent === 'wait for me pls...') {
+            element.textContent = '';
         }
     }, 300);
 }
